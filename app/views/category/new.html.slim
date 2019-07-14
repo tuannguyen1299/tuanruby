@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-xs-12
+      = form_tag '/cat/create' do
+        .form-group
+          label for="" Tên loại sản phẩm
+          input.form-control name="category[name]" placeholder=("Tên sản phẩm") type="text" 
+        button.btn.btn-primary type="submit"  Thêm mới
+
+-# Đây là file Slim, từ nay em học cách viết ni thay cho viết HTML thuần
+-# Ví dụ html thuần viết là
+

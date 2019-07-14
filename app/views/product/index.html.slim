@@ -1,0 +1,35 @@
+table
+  caption Product
+  thead
+    tr
+      th id
+      th image
+      th name
+      th giá
+      th số lượng
+      th category_id
+      th chức năng
+  tbody
+    - @products.each do |product|
+      tr
+        td
+          = product.id
+        td
+          img.product src="#{product.image}" 
+        td
+          = product.name
+        td
+          = product.price
+        td
+          = product.quantity
+        td
+          = product.category_id
+        td
+          a href="/pro/edit/#{product.id}"  Edit
+          a data-confirm=("Are you sure?") href="/pro/delete/#{product.id}"  Delete
+a href="/pro/index?sort=ASC"  Tăng dần
+a href="/pro/index?sort=DESC"  Giảm dần
+
+/ = current_user.email 
+/ a href="/users/sign_in" Hãy Đăng Nhập
+

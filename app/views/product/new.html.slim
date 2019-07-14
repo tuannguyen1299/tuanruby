@@ -1,0 +1,33 @@
+.main-panel
+  .content-wrapper
+    .row
+      .col-md-6.grid-margin.stretch-card
+        .card
+          .card-body
+            h4.card-title Product
+
+            = form_tag '/pro/create', enctype: "multipart/form-data" do
+              .form-group
+                label for=""  Id người dùng
+                input.form-control name="product[user_id]" placeholder="Id người dùng"  value= current_user.id type="number" 
+              .form-group
+                label for=""  Tên sản phẩm
+                input.form-control name="product[name]" placeholder="Tên sản phẩm" type="text" 
+              .form-group
+                label for="" Ảnh :
+                input name="product[image]" placeholder="image" type="file" 
+
+              .form-group
+                label for=""  giá
+                input.form-control name="product[price]" placeholder="giá" type="text" 
+            
+              .form-group
+                label for=""  số lượng
+                input.form-control name="product[quantity]" placeholder="số lượng" type="text" 
+              .form-group
+                label for=""  Categoryid
+                select name="product[category_id]" 
+                  - @categories.each do |category|
+                    option value="#{category.id} "= category.name
+              button.btn.btn-primary.mr-2 type="submit"  Thêm mới
+              button.btn.btn-light Cancel

@@ -1,0 +1,5 @@
+= form_tag "/cat/update/#{@category.id}" do
+  .form-group
+    label for=""  Tên loại sản phẩm
+    input.form-control name="category[name]" type="text" value="#{@category.name}" 
+  button.btn.btn-primary type="submit"  cập nhật

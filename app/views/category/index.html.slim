@@ -1,0 +1,18 @@
+table
+  caption category
+  thead
+    tr
+      th id
+      th name
+      th chức năng
+  tbody
+    - @categories.each do |category|
+      tr
+        td
+          = category.id
+        td
+          = category.name
+        td
+          a href="/cat/edit/#{category.id}"  Edit
+          a data-confirm=("Are you sure?") href="/cat/delete/#{category.id}"  Delete
+

@@ -1,0 +1,42 @@
+.container
+  - if current_user.errors.any?
+    #error_explanation
+      h2
+        = pluralize(current_user.errors.count, "error ")
+        | prohibited this user from being saved:
+      ul
+        - current_user.errors.full_messages.each do |message|
+          li= message
+  = form_tag "/user/update" do
+    .row
+      .col-md-6
+        .form-group
+          label for="" Họ
+          input.form-control name="user[first_name]" type="text" value= current_user.first_name 
+    .row
+      .col-md-6
+        .form-group
+          label for="" Tên
+          input.form-control name="user[last_name]" type="text" value= current_user.last_name 
+    .row
+      .col-md-6
+        .form-group
+          label for="" Tuổi
+          input.form-control name="user[age]" type="text" value= current_user.age 
+    .row
+      .col-md-6
+        .form-group
+          label for="" Email
+          input.form-control name="user[email]" type="text" value= current_user.email 
+    .row
+      .col-md-6
+        .form-group
+          label for=""mật khẩu
+          input.form-control name="user[password]" type="password"
+    .row
+      .col-md-6
+        .form-group
+          label for=""mật khẩu
+          input.form-control name="user[password_confirmation]" type="password"      
+    button.btn.btn-primary type="submit"  Cập nhật   
+

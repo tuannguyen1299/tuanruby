@@ -1,0 +1,29 @@
+@import "bootstrap";
+
+img.product{
+  height: 80px;
+  width: 120px;
+  margin: 10px;
+}
+
+img.logo{
+  width: 260px;
+  height: 80px;
+}
+.bg-light{
+  // background-color: #792B8E !important;
+}
+
+.site-header{
+  background-color: rgba(0, 0, 0, .85);
+  color: red;
+}
+
+.site-header a{
+  color: #999;
+  text-decoration: none;
+}
+.site-header a:hover{
+  color : #EEEEEE;
+}
+
