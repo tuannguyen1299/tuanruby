@@ -7,7 +7,8 @@ class ProductController < ApplicationController
 	end
 
 	def create
-		@product =Product.new(product_params)
+		#mặc định user_id bằng chính id của user nên không thêm theo cách bt
+		@product =current_user.products.create(product_params)
 		if @product.save
 			redirect_to "/pro/index"
 		else

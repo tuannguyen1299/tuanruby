@@ -8,9 +8,6 @@
 
             = form_tag '/pro/create', enctype: "multipart/form-data" do
               .form-group
-                label for=""  Id người dùng
-                input.form-control name="product[user_id]" placeholder="Id người dùng"  value= current_user.id type="number" 
-              .form-group
                 label for=""  Tên sản phẩm
                 input.form-control name="product[name]" placeholder="Tên sản phẩm" type="text" 
               .form-group
