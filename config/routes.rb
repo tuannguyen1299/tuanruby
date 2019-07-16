@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/pro/edit/:id'=>'product#edit'
   post'/pro/update/:id'=>'product#update'
   get'/pro/delete/:id'=>'product#delete'
+  get'/pro/show/:category_id'=>'product#show'
 
 
 end

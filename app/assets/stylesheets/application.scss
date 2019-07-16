@@ -26,4 +26,18 @@ img.logo{
 .site-header a:hover{
   color : #EEEEEE;
 }
+.menu-list a{
+  color: black;
+  // color: blue;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+li{
+  width: 160px;
+  border-bottom: 1px solid #999;
+  margin: 43px 0 43px 0;
+}
 

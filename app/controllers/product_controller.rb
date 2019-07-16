@@ -22,6 +22,7 @@ class ProductController < ApplicationController
 
 	def index
 		@sort = params[:sort]
+
 		if @sort == "ASC" or @sort = "DESC"
 			@products = Product.order(price: @sort)
 		else
@@ -47,5 +48,12 @@ class ProductController < ApplicationController
 	def delete
 		@product = Product.find(params[:id]).delete
 		redirect_to "/pro/index"
+	end
+
+	def show
+		@products = Product.where(category_id: params[:category_id])
+			
+		
+			
 	end
 end
