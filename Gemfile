@@ -61,4 +61,4 @@ gem 'bcrypt'
 # gem upload image
 gem "paperclip", "~> 5.1"
 #gem sign_in sing_up user
-gem "devise", "~> 4.1"
+gem "devise", "~> 4.7"
